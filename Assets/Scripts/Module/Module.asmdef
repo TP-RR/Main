@@ -1,0 +1,16 @@
+{
+    "name": "Module",
+    "rootNamespace": "",
+    "references": [
+        "GUID:068189ea8b0faed499c9daa1aed1a60b"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
