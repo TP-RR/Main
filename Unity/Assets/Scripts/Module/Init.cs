@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 
@@ -9,6 +10,10 @@ namespace Module
         ILRuntime.Runtime.Enviorment.AppDomain appdomain;
         void Start()
         {
+            LocalizedData.SaveObject<Dictionary<string,string>>("a",new Dictionary<string, string>(){ { "a", "a" } , { "b", "b" } });
+            var a = LocalizedData.GetObject<Dictionary<string, string>>("a");
+            Debug.Log(a);
+
             StartCoroutine(LoadILRuntime());
         }
 
@@ -45,7 +50,7 @@ namespace Module
 
         void OnILRuntimeInitialized()
         {
-            appdomain.Invoke("Hotfix.Init", "Initialize", null, null);
+            appdomain.Invoke("Hotfix.Init", "Start", null, null);
         }
     }
 }
